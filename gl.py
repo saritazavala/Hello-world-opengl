@@ -26,7 +26,6 @@ void main()
    fragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);;
 }
 """
-
 shader = compileProgram(
     compileShader(vertex_shader, GL_VERTEX_SHADER),
     compileShader(fragment_shader, GL_FRAGMENT_SHADER)
@@ -49,11 +48,11 @@ vertex_array_object = glGenVertexArrays(1)
 glBindVertexArray(vertex_array_object)
 
 glVertexAttribPointer(
-  0,  # location
-  3,  # size
-  GL_FLOAT, # type
-  GL_FALSE, # normalized
-  3 * 4, # stride
+  0,
+  3,
+  GL_FLOAT,
+  GL_FALSE,
+  3 * 4,
   ctypes.c_void_p(0)
 )
 glEnableVertexAttribArray(0)
